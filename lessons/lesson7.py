@@ -31,6 +31,7 @@ a=cursor.fetchall()
 for i in a:
     print(i)
 
+cursor.execute('''DELETE FROM user WHERE rowid %2 = 0''')
 
 db.commit()
 db.close()
